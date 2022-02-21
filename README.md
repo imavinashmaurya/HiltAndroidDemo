@@ -1,6 +1,6 @@
 # HiltAndroidDemo
-Step 1
-In Root build.gradel
+## Step 1
+### In Root build.gradel
 
      
       ext {
@@ -12,8 +12,8 @@ In Root build.gradel
       }
       
       
- Step 2
- In project build.gradel
+## Step 2
+### In project build.gradel
  
  ```
  plugins {
@@ -34,7 +34,7 @@ dependencies {
 }
 ```
 
-Step 3
+## Step 3
 
 ```
 @HiltAndroidApp
@@ -42,8 +42,8 @@ class BaseApplication: Application()
 ```
 
 
-Step 4
-Create Module class
+## Step 4
+### Create Module class
 
 ```
 @Module
@@ -61,8 +61,8 @@ class Module {
 }
 ```
 
-Step 5
-Main Usage
+## Step 5
+### Main Usage
 
 ```
 @AndroidEntryPoint
@@ -96,13 +96,13 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-Note: IF we dont define Module class then we can call it using below in desire class
+### Note: IF we dont define Module class then we can call it using below in desire class
 ```
 @Inject constructor()
 @Inject constructor(@ApplicationContext context: Context)
 ```
 
-Eg:
+**Eg:**
 ```
 class IndianFood @Inject constructor()
 ```
